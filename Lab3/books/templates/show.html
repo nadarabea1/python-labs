@@ -1,0 +1,34 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}
+    book list
+{% endblock %}
+
+
+{% block main-content %}
+    <h1> Welcome to book details </h1>
+    <table class="table">
+    <thead>
+        <tr>
+            <td> ID </td>
+            <td> title </td>
+            <td> Description </td>
+            <td> rate </td>
+            <td> views </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="color:green" >
+            <td>{{ book.id }} </td>
+            <td>{{ book.title }} </td>
+            <td> {{ book.description | truncatewords:3 | title }} </td>
+            <td> {{ book.rate }} </td>
+            <td> {{ book.views }} </td>
+        </tr>
+    </tbody>
+
+    </table>
+
+
+{% endblock %}
